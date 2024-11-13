@@ -3,9 +3,9 @@
 helpFunction()
 {
    echo ""
-   echo "Usage: $0 -d DOMAIN_VALUE -ft FORWARD_TO"
+   echo "Usage: $0 -d DOMAIN_VALUE -f FORWARD_TO"
    echo -e "\t-d - name of the domain that should be proxied. Example - my-domain.example.com"
-   echo -e "\t-ft - fully specified url to external service to which requests should be proxied"
+   echo -e "\t-f - fully specified url to external service to which requests should be proxied"
    exit 1 # Exit script after printing help
 }
 
@@ -13,7 +13,7 @@ while getopts "d:p:" opt
 do
    case "$opt" in
       d ) domain="$OPTARG" ;;
-      ft ) forward_to="$OPTARG" ;;
+      f ) forward_to="$OPTARG" ;;
       ? ) helpFunction ;; # Print helpFunction in case parameter is non-existent
    esac
 done
