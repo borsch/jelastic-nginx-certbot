@@ -5,5 +5,6 @@ RUN dnf install -y epel-release certbot python3-certbot-nginx && \
 
 COPY --chmod=0755 new-nginx-proxy.sh /usr/local/bin/new-nginx-proxy.sh
 COPY nginx-override.conf /etc/nginx/nginx.conf
+COPY default.conf /etc/nginx/conf.d/default.conf
 
 CMD ["/usr/lib/systemd/systemd"]

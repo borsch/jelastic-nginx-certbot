@@ -9,7 +9,7 @@ helpFunction()
    exit 1 # Exit script after printing help
 }
 
-while getopts "d:p:" opt
+while getopts "d:f:" opt
 do
    case "$opt" in
       d ) domain="$OPTARG" ;;
